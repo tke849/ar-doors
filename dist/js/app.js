@@ -218,7 +218,7 @@
                     for (var i = 0; i !== sources.length; ++i) {
                         var source = sources[i];
                         if (source.kind == "videoinput" && source.label.indexOf("back") >= 0) {
-                            options.video.optional.push({'sourceId': source.id});
+                            options.video.optional.push({'sourceId': source.deviceId});
                             navigator.getUserMedia(options, streamFound, streamError);
                         }
                     }
