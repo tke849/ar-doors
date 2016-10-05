@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!--<meta http-equiv="Content-Security-Policy" content=":media-src: 'self' mediastream:">-->
+	<title></title>
+
+
+	<!-- @if DIST -->
+	<base href="/">
+	<!-- @endif -->
+
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#ffffff">
+	<script src="https://threejs.org/build/three.min.js"></script>
+
+	<!-- @if APP -->
+	<!--<script type="text/javascript" src="cordova.js"></script>-->
+	<!-- @endif -->
+
+
+
+
+
+
+	<style>
+
+
+		body {
+			height: 100%;
+			margin: 0;
+			overflow: hidden;
+			padding: 0;
+			width: 100%;
+			background-color: transparent;
+		}
+
+
+	</style>
+
+
+
+</head>
+<body ng-app="JWAR">
+
+
+<div ui-view></div>
+
+<!-- build:js js/bower.js -->
+
+<script src="../bower_components/angular/angular.js"></script>
+
+<script src="../bower_components/angular-animate/angular-animate.js"></script>
+<script src="../bower_components/angular-touch/angular-touch.js"></script>
+<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+
+<!-- endbuild -->
+
+
+<!-- build:js js/app.js -->
+<script src="app.js"></script>
+
+
+<script src="modules/app.routes.js"></script>
+<script src="modules/layout/layout.controller.js"></script>
+<script src="modules/details/details.controller.js"></script>
+<script src="modules/home/home.controller.js"></script>
+
+
+<!-- endbuild -->
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<style>
+    .items{
+        padding: 40px;
+    }
+    .items img{
+        max-height: 100px;
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+</style>
+
+<div class="items">
+    <img ng-repeat="item in items" src="{{item.src}}" ng-click="goToPage(item.id)">
+</div>
