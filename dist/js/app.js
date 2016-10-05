@@ -217,15 +217,9 @@
                 navigator.mediaDevices.enumerateDevices().then(function(sources) {
                     for (var i = 0; i !== sources.length; ++i) {
                         var source = sources[i];
-                        if (source.kind === 'videoInput') {
-                            //if (source.facing && source.facing == "environment") {
-                            //    options.video.optional.push({'sourceId': source.id});
-                            //    navigator.getUserMedia(options, streamFound, streamError);
-                            //}
-                            if (source.label.indexOf('back') > -1 ) {
-                                    options.video.optional.push({'sourceId': source.id});
-                                    navigator.getUserMedia(options, streamFound, streamError);
-                                }
+                        if (source.kind == "videoinput" && source.label.indexOf("back") >= 0) {
+                            options.video.optional.push({'sourceId': source.id});
+                            navigator.getUserMedia(options, streamFound, streamError);
                         }
                     }
 
