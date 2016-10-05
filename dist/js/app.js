@@ -220,11 +220,12 @@
                         if (source.kind === 'video') {
                             if (source.facing && source.facing == "environment") {
                                 options.video.optional.push({'sourceId': source.id});
+                                navigator.getUserMedia(options, streamFound, streamError);
                             }
                         }
                     }
 
-                    navigator.getUserMedia(options, streamFound, streamError);
+                    //navigator.getUserMedia(options, streamFound, streamError);
                 });
 
             }
@@ -235,7 +236,7 @@
                 video.src = URL.createObjectURL(stream);
                 video.style.width = '100%';
                 video.style.height = '100%';
-                video.play();
+                //video.play();
 
                 //var canvas = document.createElement('canvas');
                 //canvas.width = video.clientWidth;
