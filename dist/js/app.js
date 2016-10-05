@@ -20,7 +20,7 @@
         ])
         .config(function ($urlRouterProvider, $locationProvider, $sceDelegateProvider) {
 
-            $locationProvider.html5Mode(true);
+            //$locationProvider.html5Mode(true);
 
             $sceDelegateProvider.resourceUrlWhitelist([
                 'self']);
