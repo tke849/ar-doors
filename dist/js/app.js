@@ -410,7 +410,7 @@
 
         $scope.init = function(){
 
-            //$scope.loadARVideo();
+            $scope.loadARVideo();
 
 
 
